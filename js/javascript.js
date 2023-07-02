@@ -1,7 +1,7 @@
 const ticketkm = prompt ("Quanti chilometri vuoi percorrere?");
 const userage = prompt ("Quanti anni hai?");
 
-let ticketprice = (parseInt(ticketkm) * 0.21).toFixed(2);
+let ticketprice = (parseInt(ticketkm) * 0.21);
 const under18discount = (ticketprice * 20) / 100;
 const over65discount = (ticketprice * 40) / 100;
 
@@ -17,4 +17,5 @@ else {
     ticketprice = ticketprice
 }
 
-document.getElementById("output-price").innerHTML =`Il prezzo finale è di ${ticketprice} €`
+
+document.getElementById("output-price").innerHTML =`Il prezzo finale è di ${ticketprice.toFixed(2)} €`
